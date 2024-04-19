@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>丰收乐行：文创、旅游、社交、AIGC！</title>  <!-- 网页标题 -->
+
+    <meta
+        name="description" 
+        content="丰收乐行官网，致力于打造全国最大的“农·文·旅”一站式平台"  
+        >  <!-- 网页描述 -->
+    <link rel="icon" type="image/png" href="chatgpt-web-main\promax.png">
+    <meta name="keywords" content="丰收乐行，食品，生鲜，三农，红旅，社交，电商，购物，AIGC">  <!-- 网页关键词 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./icon/iconfont.css">
+    <link rel="stylesheet" href="./css/index2.css">  
+    <link rel="stylesheet" href="./css/tour.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+</head>
+<body>
+    
+    <main>
+      <nav class="main-menu">
+        <div>
+          <div class="user-info">
+            <img
+              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/37e5ccfa-f9ee-458b-afa2-dcd85b495e4e"
+              alt="user" />
+            <p>Jane Wilson</p>
+          </div>
+          <ul>
+
+            <li class="nav-item">
+              <a href="index.html">
+                <!-- <i class="fa fa-heart nav-icon"></i> -->
+                <span class="iconfont icon-shouyeshidi"></span>
+                <span class="nav-text" style="    font-size: 1.68rem;    margin-left: -8px;">首页</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="community.html">
+                <!-- <i class="fa fa-map nav-icon"></i> -->
+                <span class="iconfont icon-duihua"></span>
+                <span class="nav-text" style="    font-size: 1.68rem;    margin-left: -8px;">社群交流</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="shop.html">
+                <!-- <i class="fa fa-arrow-trend-up nav-icon"></i> -->
+                <span class="iconfont icon-mendian-shidi"></span>
+                <span class="nav-text" style="    font-size: 1.68rem;    margin-left: -8px;">三农电商</span>
+              </a>
+            </li>
+
+            <li class="nav-item  active">
+              <a href="tour.html">
+                <!-- <i class="fa fa-compact-disc nav-icon"></i> -->
+                <span class="iconfont icon-luxian"></span>
+                <span class="nav-text" style="    font-size: 1.68rem;    margin-left: -8px;">红旅路线</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="ai.html">
+                <!-- <i class="fa fa-circle-play nav-icon"></i> -->
+                <span class="iconfont icon-p058jiqiren"></span>
+                <span class="nav-text" style="    font-size: 1.68rem;    margin-left: -8px;">AI 互动</span>
+              </a>
+            </li>
+
+            
+          </ul>
+        </div>
+
+        <ul>
+          <li class="nav-item">
+            <a href="#">
+              <!-- <i class="fa fa-user nav-icon"></i> -->
+              <span class="iconfont icon-wodeshidi"></span>
+              <span class="nav-text" style="    font-size: 1.68rem;    margin-left: -8px;">我的主页</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#">
+              <!-- <i class="fa fa-gear nav-icon"></i> -->
+              <span class="iconfont icon-chilun_shiditubiao"></span>
+              <span class="nav-text" style="    font-size: 1.68rem;    margin-left: -8px;">更多设置</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#">
+              <!-- <i class="fa fa-right-from-bracket nav-icon"></i> -->
+              <span class="iconfont icon-tuichu"></span>
+              <span class="nav-text" style="    font-size: 1.68rem;    margin-left: -8px;">退出登录</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="content">
+        <div class="left-content">
+            <div id="mapid"></div>
+
+            <!-- 模态窗口1 -->
+            <div id="myModal1" class="modal fade" role="dialog">
+                <div class="card1" style="height: 460px;width: 600px;margin: 200px 500px;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="card2" data-state="#about">
+                                <div class="card-header">
+                                  <div class="card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
+                                  <img class="card-avatar" src="https://p2.itc.cn/q_70/images03/20220428/77a842cb619942bc92dba22b6b4ab65e.jpeg" alt="avatar" />
+                                  <h1 class="card-fullname" style="color: rgb(105, 255, 225);">海龙村</h1>
+                                  <h2 class="card-jobtitle"style="color: rgb(85, 212, 255);">四川省 遂宁市 安居区</h2>
+                                </div>
+                                <div class="card-main">
+                                  <div class="card-section is-active" id="about">
+                                    <div class="card-content">
+                                      <div class="card-subtitle">简介</div>
+                                      <p class="card-desc">遂宁市安居区海龙村，曾经是一个沼气建设大村，有着“中国沼气能源革命第一村”美誉。近年来，遂宁依托沼气文化这一独特IP，以“沼气文化”为脉络、以农文旅园区为载体，创新研学旅行、农事体验、乡村培训为一体的农文旅融合发展新模式，成功打造海龙凯歌农文旅园区，走出一条“党建引领乡村振兴、低碳赋能共同富裕”的绿色低碳发展新路子，成为成渝地区农文旅融合发展的实践模板和乡村振兴的特色名片，让蓝色火焰生生不息。
+                                      </p>
+                                    </div>
+                                    <div class="card-social">
+                                      <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" /></svg></a>
+                                      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                          <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" /></svg></a>
+                                      <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
+                                          <path d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
+                                          <path d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" /></svg></a>
+                                      <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" /></svg></a>
+                                    </div>
+                                  </div>
+                                  <div class="card-section" id="experience">
+                                    <div class="card-content">
+                                      <div class="card-subtitle">推荐路线</div>
+                                      <div class="card-timeline">
+                                        <div class="card-item" data-year="day 1">
+                                          <div class="card-item-title">人民公社食堂 <span> </span></div>
+                                          <div class="card-item-desc">中老年怀旧、青少年研学、乡村干部培训、亲子教育体验”</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 2">
+                                          <div class="card-item-title">沼气博览园 <span> </span></div>
+                                          <div class="card-item-desc">废弃的沼气池焕发新机，还原老旧沼气池面貌，规划打造中国沼气博览园</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 3">
+                                          <div class="card-item-title">稻田迷宫<span> </span></div>
+                                          <div class="card-item-desc">“春种彩稻夏观景，冬种油菜春赏花”</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 4">
+                                          <div class="card-item-title">星空营地 <span> </span></div>
+                                          <div class="card-item-desc">星光亲吻脸庞，晚霞抚摸肩膀</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-section" id="contact">
+                                    <div class="card-content">
+                                      <div class="card-subtitle">联系方式</div>
+                                      <div class="card-contact-wrapper">
+                                        <div class="card-contact">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                            <circle cx="12" cy="10" r="3" /></svg>
+                                            四川省，遂宁市，安居区，海龙村
+                                        </div>
+                                        <div class="card-contact">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>(269) 756-9809</div>
+                                        <div class="card-contact">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                            <path d="M22 6l-10 7L2 6" /></svg>
+                                          william@rocheald.com
+                                        </div>
+                                        <button class="contact-me">来一场说走就走的旅行</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-buttons">
+                                    <button data-section="#about" class="is-active">景区简介</button>
+                                    <button data-section="#experience">推荐路线</button>
+                                    <button data-section="#contact">联系方式</button>
+                                  </div>
+                                </div>
+                              </div>
+                            
+                            
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        
+            <!-- 模态窗口2 -->
+            <div id="myModal2" class="modal fade" role="dialog">
+                <div class="card1" style="height: 460px;width: 600px;margin: 200px 500px;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="card2" data-state="#about">
+                                <div class="card-header">
+                                  <div class="card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
+                                  <img class="card-avatar" src="https://p2.itc.cn/q_70/images03/20220428/77a842cb619942bc92dba22b6b4ab65e.jpeg" alt="avatar" />
+                                  <h1 class="card-fullname" style="color: rgb(105, 255, 225);">海龙村</h1>
+                                  <h2 class="card-jobtitle"style="color: rgb(85, 212, 255);">四川省 遂宁市 安居区</h2>
+                                </div>
+                                <div class="card-main">
+                                  <div class="card-section is-active" id="about2">
+                                    <div class="card-content">
+                                      <div class="card-subtitle">简介</div>
+                                      <p class="card-desc">遂宁市安居区海龙村，曾经是一个沼气建设大村，有着“中国沼气能源革命第一村”美誉。近年来，遂宁依托沼气文化这一独特IP，以“沼气文化”为脉络、以农文旅园区为载体，创新研学旅行、农事体验、乡村培训为一体的农文旅融合发展新模式，成功打造海龙凯歌农文旅园区，走出一条“党建引领乡村振兴、低碳赋能共同富裕”的绿色低碳发展新路子，成为成渝地区农文旅融合发展的实践模板和乡村振兴的特色名片，让蓝色火焰生生不息。
+                                      </p>
+                                    </div>
+                                    <div class="card-social">
+                                      <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" /></svg></a>
+                                      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                          <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" /></svg></a>
+                                      <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
+                                          <path d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
+                                          <path d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" /></svg></a>
+                                      <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" /></svg></a>
+                                    </div>
+                                  </div>
+                                  <div class="card-section" id="experience2">
+                                    <div class="card-content">
+                                      <div class="card-subtitle">推荐路线</div>
+                                      <div class="card-timeline">
+                                        <div class="card-item" data-year="day 1">
+                                          <div class="card-item-title">人民公社食堂 <span> </span></div>
+                                          <div class="card-item-desc">中老年怀旧、青少年研学、乡村干部培训、亲子教育体验”</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 2">
+                                          <div class="card-item-title">沼气博览园 <span> </span></div>
+                                          <div class="card-item-desc">废弃的沼气池焕发新机，还原老旧沼气池面貌，规划打造中国沼气博览园</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 3">
+                                          <div class="card-item-title">稻田迷宫<span> </span></div>
+                                          <div class="card-item-desc">“春种彩稻夏观景，冬种油菜春赏花”</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 4">
+                                          <div class="card-item-title">星空营地 <span> </span></div>
+                                          <div class="card-item-desc">星光亲吻脸庞，晚霞抚摸肩膀</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-section" id="contact2">
+                                    <div class="card-content">
+                                      <div class="card-subtitle">联系方式</div>
+                                      <div class="card-contact-wrapper">
+                                        <div class="card-contact">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                            <circle cx="12" cy="10" r="3" /></svg>
+                                            四川省，遂宁市，安居区，海龙村
+                                        </div>
+                                        <div class="card-contact">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>(269) 756-9809</div>
+                                        <div class="card-contact">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                            <path d="M22 6l-10 7L2 6" /></svg>
+                                          william@rocheald.com
+                                        </div>
+                                        <button class="contact-me">来一场说走就走的旅行</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card-buttons">
+                                    <button data-section="#about2" class="is-active">景区简介</button>
+                                    <button data-section="#experience2">推荐路线</button>
+                                    <button data-section="#contact2">联系方式</button>
+                                  </div>
+                                </div>
+                              </div>
+                            
+                            
+                        </div>
+                    </div>
+                  </div>
+            </div>
+
+            <!-- 模态窗口3 -->
+            <div id="myModal3" class="modal fade" role="dialog">
+                <div class="card1" style="height: 460px;width: 600px;margin: 200px 500px;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="card2" data-state="#about">
+                                <div class="card-header">
+                                    <div class="card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
+                                    <img class="card-avatar" src="https://p2.itc.cn/q_70/images03/20220428/77a842cb619942bc92dba22b6b4ab65e.jpeg" alt="avatar" />
+                                    <h1 class="card-fullname" style="color: rgb(105, 255, 225);">海龙村</h1>
+                                    <h2 class="card-jobtitle"style="color: rgb(85, 212, 255);">四川省 遂宁市 安居区</h2>
+                                </div>
+                                <div class="card-main">
+                                    <div class="card-section is-active" id="about3">
+                                    <div class="card-content">
+                                        <div class="card-subtitle">简介</div>
+                                        <p class="card-desc">遂宁市安居区海龙村，曾经是一个沼气建设大村，有着“中国沼气能源革命第一村”美誉。近年来，遂宁依托沼气文化这一独特IP，以“沼气文化”为脉络、以农文旅园区为载体，创新研学旅行、农事体验、乡村培训为一体的农文旅融合发展新模式，成功打造海龙凯歌农文旅园区，走出一条“党建引领乡村振兴、低碳赋能共同富裕”的绿色低碳发展新路子，成为成渝地区农文旅融合发展的实践模板和乡村振兴的特色名片，让蓝色火焰生生不息。
+                                        </p>
+                                    </div>
+                                    <div class="card-social">
+                                        <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" /></svg></a>
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" /></svg></a>
+                                        <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
+                                            <path d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
+                                            <path d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" /></svg></a>
+                                        <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" /></svg></a>
+                                    </div>
+                                    </div>
+                                    <div class="card-section" id="experience3">
+                                    <div class="card-content">
+                                        <div class="card-subtitle">推荐路线</div>
+                                        <div class="card-timeline">
+                                        <div class="card-item" data-year="day 1">
+                                            <div class="card-item-title">人民公社食堂 <span> </span></div>
+                                            <div class="card-item-desc">中老年怀旧、青少年研学、乡村干部培训、亲子教育体验”</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 2">
+                                            <div class="card-item-title">沼气博览园 <span> </span></div>
+                                            <div class="card-item-desc">废弃的沼气池焕发新机，还原老旧沼气池面貌，规划打造中国沼气博览园</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 3">
+                                            <div class="card-item-title">稻田迷宫<span> </span></div>
+                                            <div class="card-item-desc">“春种彩稻夏观景，冬种油菜春赏花”</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 4">
+                                            <div class="card-item-title">星空营地 <span> </span></div>
+                                            <div class="card-item-desc">星光亲吻脸庞，晚霞抚摸肩膀</div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="card-section" id="contact3">
+                                    <div class="card-content">
+                                        <div class="card-subtitle">联系方式</div>
+                                        <div class="card-contact-wrapper">
+                                        <div class="card-contact">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                            <circle cx="12" cy="10" r="3" /></svg>
+                                            四川省，遂宁市，安居区，海龙村
+                                        </div>
+                                        <div class="card-contact">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>(269) 756-9809</div>
+                                        <div class="card-contact">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                            <path d="M22 6l-10 7L2 6" /></svg>
+                                            william@rocheald.com
+                                        </div>
+                                        <button class="contact-me">来一场说走就走的旅行</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="card-buttons">
+                                    <button data-section="#about3" class="is-active">景区简介</button>
+                                    <button data-section="#experience3">推荐路线</button>
+                                    <button data-section="#contact3">联系方式</button>
+                                    </div>
+                                </div>
+                                </div>
+                            
+                            
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+            <!-- 模态窗口4 -->
+            <div id="myModal4" class="modal fade" role="dialog">
+                <div class="card1" style="height: 460px;width: 600px;margin: 200px 500px;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="card2" data-state="#about">
+                                <div class="card-header">
+                                    <div class="card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
+                                    <img class="card-avatar" src="https://p2.itc.cn/q_70/images03/20220428/77a842cb619942bc92dba22b6b4ab65e.jpeg" alt="avatar" />
+                                    <h1 class="card-fullname" style="color: rgb(105, 255, 225);">海龙村</h1>
+                                    <h2 class="card-jobtitle"style="color: rgb(85, 212, 255);">四川省 遂宁市 安居区</h2>
+                                </div>
+                                <div class="card-main">
+                                    <div class="card-section is-active" id="about4">
+                                    <div class="card-content">
+                                        <div class="card-subtitle">简介</div>
+                                        <p class="card-desc">遂宁市安居区海龙村，曾经是一个沼气建设大村，有着“中国沼气能源革命第一村”美誉。近年来，遂宁依托沼气文化这一独特IP，以“沼气文化”为脉络、以农文旅园区为载体，创新研学旅行、农事体验、乡村培训为一体的农文旅融合发展新模式，成功打造海龙凯歌农文旅园区，走出一条“党建引领乡村振兴、低碳赋能共同富裕”的绿色低碳发展新路子，成为成渝地区农文旅融合发展的实践模板和乡村振兴的特色名片，让蓝色火焰生生不息。
+                                        </p>
+                                    </div>
+                                    <div class="card-social">
+                                        <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" /></svg></a>
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" /></svg></a>
+                                        <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
+                                            <path d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
+                                            <path d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" /></svg></a>
+                                        <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" /></svg></a>
+                                    </div>
+                                    </div>
+                                    <div class="card-section" id="experience4">
+                                    <div class="card-content">
+                                        <div class="card-subtitle">推荐路线</div>
+                                        <div class="card-timeline">
+                                        <div class="card-item" data-year="day 1">
+                                            <div class="card-item-title">人民公社食堂 <span> </span></div>
+                                            <div class="card-item-desc">中老年怀旧、青少年研学、乡村干部培训、亲子教育体验”</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 2">
+                                            <div class="card-item-title">沼气博览园 <span> </span></div>
+                                            <div class="card-item-desc">废弃的沼气池焕发新机，还原老旧沼气池面貌，规划打造中国沼气博览园</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 3">
+                                            <div class="card-item-title">稻田迷宫<span> </span></div>
+                                            <div class="card-item-desc">“春种彩稻夏观景，冬种油菜春赏花”</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 4">
+                                            <div class="card-item-title">星空营地 <span> </span></div>
+                                            <div class="card-item-desc">星光亲吻脸庞，晚霞抚摸肩膀</div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="card-section" id="contact4">
+                                    <div class="card-content">
+                                        <div class="card-subtitle">联系方式</div>
+                                        <div class="card-contact-wrapper">
+                                        <div class="card-contact">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                            <circle cx="12" cy="10" r="3" /></svg>
+                                            四川省，遂宁市，安居区，海龙村
+                                        </div>
+                                        <div class="card-contact">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>(269) 756-9809</div>
+                                        <div class="card-contact">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                            <path d="M22 6l-10 7L2 6" /></svg>
+                                            william@rocheald.com
+                                        </div>
+                                        <button class="contact-me">来一场说走就走的旅行</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="card-buttons">
+                                    <button data-section="#about4" class="is-active">景区简介</button>
+                                    <button data-section="#experience4">推荐路线</button>
+                                    <button data-section="#contact4">联系方式</button>
+                                    </div>
+                                </div>
+                                </div>
+                            
+                            
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+            <!-- 模态窗口5 -->
+            <div id="myModal5" class="modal fade" role="dialog">
+                <div class="card1" style="height: 460px;width: 600px;margin: 200px 500px;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="card2" data-state="#about5">
+                                <div class="card-header">
+                                    <div class="card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
+                                    <img class="card-avatar" src="https://p2.itc.cn/q_70/images03/20220428/77a842cb619942bc92dba22b6b4ab65e.jpeg" alt="avatar" />
+                                    <h1 class="card-fullname" style="color: rgb(105, 255, 225);">海龙村</h1>
+                                    <h2 class="card-jobtitle"style="color: rgb(85, 212, 255);">四川省 遂宁市 安居区</h2>
+                                </div>
+                                <div class="card-main">
+                                    <div class="card-section is-active" id="about5">
+                                    <div class="card-content">
+                                        <div class="card-subtitle">简介</div>
+                                        <p class="card-desc">遂宁市安居区海龙村，曾经是一个沼气建设大村，有着“中国沼气能源革命第一村”美誉。近年来，遂宁依托沼气文化这一独特IP，以“沼气文化”为脉络、以农文旅园区为载体，创新研学旅行、农事体验、乡村培训为一体的农文旅融合发展新模式，成功打造海龙凯歌农文旅园区，走出一条“党建引领乡村振兴、低碳赋能共同富裕”的绿色低碳发展新路子，成为成渝地区农文旅融合发展的实践模板和乡村振兴的特色名片，让蓝色火焰生生不息。
+                                        </p>
+                                    </div>
+                                    <div class="card-social">
+                                        <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" /></svg></a>
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" /></svg></a>
+                                        <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
+                                            <path d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
+                                            <path d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" /></svg></a>
+                                        <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" /></svg></a>
+                                    </div>
+                                    </div>
+                                    <div class="card-section" id="experience5">
+                                    <div class="card-content">
+                                        <div class="card-subtitle">推荐路线</div>
+                                        <div class="card-timeline">
+                                        <div class="card-item" data-year="day 1">
+                                            <div class="card-item-title">人民公社食堂 <span> </span></div>
+                                            <div class="card-item-desc">中老年怀旧、青少年研学、乡村干部培训、亲子教育体验”</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 2">
+                                            <div class="card-item-title">沼气博览园 <span> </span></div>
+                                            <div class="card-item-desc">废弃的沼气池焕发新机，还原老旧沼气池面貌，规划打造中国沼气博览园</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 3">
+                                            <div class="card-item-title">稻田迷宫<span> </span></div>
+                                            <div class="card-item-desc">“春种彩稻夏观景，冬种油菜春赏花”</div>
+                                        </div>
+                                        <div class="card-item" data-year="day 4">
+                                            <div class="card-item-title">星空营地 <span> </span></div>
+                                            <div class="card-item-desc">星光亲吻脸庞，晚霞抚摸肩膀</div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="card-section" id="contact">
+                                    <div class="card-content">
+                                        <div class="card-subtitle">联系方式</div>
+                                        <div class="card-contact-wrapper">
+                                        <div class="card-contact">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                            <circle cx="12" cy="10" r="3" /></svg>
+                                            四川省，遂宁市，安居区，海龙村
+                                        </div>
+                                        <div class="card-contact">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>(269) 756-9809</div>
+                                        <div class="card-contact">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                            <path d="M22 6l-10 7L2 6" /></svg>
+                                            william@rocheald.com
+                                        </div>
+                                        <button class="contact-me">来一场说走就走的旅行</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="card-buttons">
+                                    <button data-section="#about5" class="is-active">景区简介</button>
+                                    <button data-section="#experience5">推荐路线</button>
+                                    <button data-section="#contact5">联系方式</button>
+                                    </div>
+                                </div>
+                                </div>
+                            
+                            
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        
+                        
+
+        </div>
+
+        <div class="right-content">
+          <div class="recommended-songs">
+            <h1 style="font-size: 2.2rem;font-weight: bolder;">热 门 景 点</h1>
+            <div class="song-container">
+              <div class="song">
+                <div class="song-img">
+                  <img
+                    src="https://p4.itc.cn/q_70/images03/20231013/a0ff54e7f9234841ade8c6b618522e91.jpeg"
+                    alt="" />
+                  <div class="overlay">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div class="song-title">
+                  <h2 style="font-size: 1.5rem;">沼气博览园</h2>
+                  <p style="    font-size: 1.2rem;">海龙村</p>
+                </div>
+                <span style="    font-size: 1.2rem;">600人流量 /1月</span>
+              </div>
+
+              <div class="song">
+                <div class="song-img">
+                  <img
+                    src="https://p8.itc.cn/q_70/images03/20231013/895db77e1e7f41f29f37703efe84f734.jpeg"
+                    alt="" />
+                  <div class="overlay">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div class="song-title">
+                  <h2 style="font-size: 1.5rem;">云仟石屏竹湖/h2>
+                  <p style="    font-size: 1.2rem;">云顶村</p>
+                </div>
+                <span  style="    font-size: 1.2rem;">¥573人流量 /1月</span>
+              </div>
+
+              <div class="song">
+                <div class="song-img">
+                  <img
+                    src="https://p6.itc.cn/q_70/images03/20231013/ac1b1669177d47508d39ae2c32a29259.jpeg"
+                    alt="" />
+                  <div class="overlay">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div class="song-title">
+                  <h2 style="font-size: 1.5rem;">仙人掌营地</h2>
+                  <p style="    font-size: 1.2rem;">竹泉村</p>
+                </div>
+                <span  style="    font-size: 1.2rem;">517人流量 /1月</span>
+              </div>
+
+              <div class="song">
+                <div class="song-img">
+                  <img
+                    src="https://p1.itc.cn/q_70/images03/20231013/f34491f696db48b48ac6898f7a671186.jpeg"
+                    alt="" />
+                  <div class="overlay">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div class="song-title">
+                  <h2 style="font-size: 1.5rem;">柴草荷花园</h2>
+                  <p style="    font-size: 1.2rem;">郑寨村</p>
+                </div>
+                <span  style="    font-size: 1.2rem;">431人流量 /1月</span>
+              </div>
+
+              <div class="song">
+                <div class="song-img">
+                  <img
+                    src="https://p0.itc.cn/q_70/images03/20231013/4938cdfcb08e4d7cbe5e0486a056cab3.jpeg"
+                    alt="" />
+                  <div class="overlay">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div class="song-title">
+                  <h2 style="font-size: 1.5rem;">星空营地</h2>
+                  <p style="    font-size: 1.2rem;">海龙村</p>
+                </div>
+                <span  style="    font-size: 1.2rem;">¥420人流量 /1月</span>
+              </div>
+
+
+              <div class="song">
+                <div class="song-img">
+                  <img
+                    src="https://q4.itc.cn/images01/20240125/d2bae958992f4ad9bbccf9ca6a73d68c.jpeg"
+                    alt="" />
+                  <div class="overlay">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <div class="song-title">
+                  <h2 style="font-size: 1.5rem;">“海龙凯歌”农旅园区</h2>
+                  <p style="    font-size: 1.2rem;">海龙村</p>
+                </div>
+                <span  style="    font-size: 1.2rem;">336人流量 /1月</span>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script  src="./js/index.js"></script>
+    <script>
+        var map = L.map('mapid').setView([38.9342, 100.4194], 4); 
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        var locations = [
+            {coords: [30.35541,105.45636], iconUrl: 'images/tour/1.webp', title: '标题1', },
+            {coords: [32.35541,116.45636], iconUrl: 'images/tour/2.jpg', title: '标题2', },
+            {coords: [28.35541,117.45636], iconUrl: 'images/tour/3.webp', title: '标题3', },
+            {coords: [29.35541,97.45636], iconUrl: 'images/tour/4.webp', title: '标题4', },
+            {coords: [23.35541,107.45636], iconUrl: 'images/tour/5.jpg', title: '标题5', },
+            // 在这里添加更多的位置和图标URL
+        ];
+
+        for (var i = 0; i < locations.length; i++) {
+            (function() {
+                var location = locations[i];
+                var myIcon = L.divIcon({
+                    className: 'my-div-icon',
+                    iconSize: [50, 50],
+                    iconAnchor: [25, 60], // 设置图标的锚点
+                    html: '<div style="background: url(' + location.iconUrl + '); background-size: cover; border-radius: 50%; width: 50px; height: 50px;"></div>'
+                });
+
+                var marker = L.marker(location.coords, {icon: myIcon}).addTo(map); // 在地图上添加一个带有图标的标记
+
+                marker.on('click', function (e) {
+                    if (location.title === '标题1') {
+                        $('#myModal1').modal('show');
+                    } else if (location.title === '标题2') {
+                        $('#myModal2').modal('show');
+                        
+                    }
+                    else if (location.title === '标题3') {
+                        $('#myModal3').modal('show');
+                    }
+                    else if (location.title === '标题4') {
+                        $('#myModal4').modal('show');
+                    }
+                    else if (location.title === '标题5') {
+                        $('#myModal5').modal('show');
+                    }
+                });
+            })();
+        }
+    </script>
+    <script src="./js/tour.js"> </script>
+
+
+    
+  </body>
+</html>

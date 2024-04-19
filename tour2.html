@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>丰收乐行：文创、旅游、社交、AIGC！</title>  <!-- 网页标题 -->
+
+    <meta
+        name="description" 
+        content="丰收乐行官网，致力于打造全国最大的“农·文·旅”一站式平台"  
+        >  <!-- 网页描述 -->
+    <link rel="icon" type="image/png" href="chatgpt-web-main\promax.png">
+    <meta name="keywords" content="丰收乐行，食品，生鲜，三农，红旅，社交，电商，购物，AIGC">  <!-- 网页关键词 -->
+
+    <link rel="stylesheet" href="./css/SearchInfoWindow_min.css" />
+    <!--build:css css/styles.min1.css-->
+    <link rel="stylesheet" href="./css/common2.css">
+    <!--endbuild-->
+    <link rel="stylesheet" href="./css/swiper3.4.2.css">
+    <link rel="stylesheet" href="./css/detail.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/leaflet.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./icon/iconfont.css">
+    <link rel="stylesheet" href="./css/index2.css">  
+    <link rel="stylesheet" href="./css/tour.css">
+    <link rel="stylesheet" href="./css/div.css">
+
+    <script src="./js/leaflet.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  <script type="./js/jq3.2.1.js"></script>
+</head>
+
+
+<body>
+    
+    <main>
+      <nav class="main-menu">
+        <div>
+          <div class="user-info">
+            <img
+              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/37e5ccfa-f9ee-458b-afa2-dcd85b495e4e"
+              alt="user" />
+            <p>Jane Wilson</p>
+          </div>
+          <ul>
+
+            <li class="nav-item">
+              <a href="index.html">
+                <!-- <i class="fa fa-heart nav-icon"></i> -->
+                <span class="iconfont icon-shouyeshidi"></span>
+                <span class="nav-text" style="    font-size: 1.68rem ;width: 84px;    ">首页</span>
+              </a>
+            </li>
+
+            <li class="nav-item  active">
+                <a href="tour2.html">
+                  <!-- <i class="fa fa-compact-disc nav-icon"></i> -->
+                  <span class="iconfont icon-luxian"></span>
+                  <span class="nav-text" style="    font-size: 1.68rem ;width: 84px;    ">旅游服务</span>
+                </a>
+              </li>
+
+
+
+            <li class="nav-item">
+              <a href="vr.html">
+                <!-- <i class="fa fa-arrow-trend-up nav-icon"></i> -->
+                <span class="iconfont icon-mendian-shidi"></span>
+                <span class="nav-text" style="    font-size: 1.68rem ;width: 84px;    ">VR 观景</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="community.html">
+                  <!-- <i class="fa fa-map nav-icon"></i> -->
+                  <span class="iconfont icon-duihua"></span>
+                  <span class="nav-text" style="    font-size: 1.68rem ;width: 84px;    ">口头文化圈</span>
+                </a>
+              </li>
+
+
+
+            <li class="nav-item">
+              <a href="ai.html">
+                <!-- <i class="fa fa-circle-play nav-icon"></i> -->
+                <span class="iconfont icon-p058jiqiren"></span>
+                <span class="nav-text" style="    font-size: 1.68rem ;width: 84px;    ">AI 互动</span>
+              </a>
+            </li>
+
+            
+          </ul>
+        </div>
+
+        <ul>
+          <li class="nav-item">
+            <a href="#">
+              <!-- <i class="fa fa-user nav-icon"></i> -->
+              <span class="iconfont icon-wodeshidi"></span>
+              <span class="nav-text" style="    font-size: 1.68rem;    margin-left: -8px;">我的主页</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#">
+              <!-- <i class="fa fa-gear nav-icon"></i> -->
+              <span class="iconfont icon-chilun_shiditubiao"></span>
+              <span class="nav-text" style="    font-size: 1.68rem;    margin-left: -8px;">更多设置</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#">
+              <!-- <i class="fa fa-right-from-bracket nav-icon"></i> -->
+              <span class="iconfont icon-tuichu"></span>
+              <span class="nav-text" style="    font-size: 1.68rem;    margin-left: -8px;">退出登录</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <section class="content" style="grid-template-columns: none;">
+            
+
+    <div class="box" style="background: none;">
+        <div class="center" style="margin: 0 130px;">
+            <div class="infos">
+                <h3 class="title" style="    color: #fff;">北京圣泉山旅游风景区</h3>
+                <p class="summary" style="color: #cea461;">旅游步道平均坡度1.3度，沿途峰岭沟谷间松柏成林，灌木葱翠。绝尘世喧嚣，有百鸟啼鸣。空气清新，适宜漫步观景;凉风习习，适宜休闲避署。</p>
+                <div class="pics">
+                    <div class="pic">
+                        <img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321050201330.jpg">
+                    </div>
+                                            <div class="tip">
+                                                                                        <span>景区等级: <i>AAA</i></span>
+                                                    </div>
+                                        <div class="tip1">
+                                                                                    <span class="sp1">特色游</span>
+                            
+                                                                                    <span class="sp1 sp2">登山</span>
+                            
+                                                                                    <span class="sp1 sp2">踏青</span>
+                            
+                                                                                    <span class="sp1 sp2">赏花</span>
+                            
+                                            </div>
+                </div>
+                <div class="phones clearfix">
+                    <div class="phone fl">
+                        <ul>
+                                                            <li class="ph">
+                                    <p>联系方式:</p>
+                                    <span>010-60637288、010-60637289</span>
+                                </li>
+                            
+                                                            <li class="date">
+                                    <p>最佳游览时间:</p>
+                                    <span>春季、秋季</span>
+                                </li>
+                                                                                        <li class="time">
+                                    <p>推荐游览时长:</p>
+                                    <span>10小时</span>
+                                </li>
+                                                                                        <li class="price">
+                                    <p>门票价格:</p>
+                                    <em class="price-block">
+                                        <b class="price-txt">
+                                            成人景区门票：35元(含农家餐)<br/>学生、现役军人、老年人持证享受半价门票：17元(不含农家餐)
+                                            <em class="shadow-tip"></em>
+                                            <i class="price-shadow">  成人景区门票：35元(含农家餐)<br/>学生、现役军人、老年人持证享受半价门票：17元(不含农家餐)</i>
+                                        </b>
+                                    </em>
+                                </li>
+                            
+                                                            <li class="open">
+                                    <p class="">开放时间:</p>
+                                    <span class="sp1">夏令：6：00-18：00，17：00停止入场<br/>冬令：8：00-17：00，17：00停止入场</span>
+                                </li>
+                                                    </ul>
+                    </div>
+                    <!-- 景区介绍 -->
+                    <div class="desc fr">
+                        <h4 style="    color: #fff;">景区介绍</h4>
+                        <h5 style="    color: #fff;">北京圣泉山旅游风景区</h5>
+                        <p style="    color: #cea461;">圣泉山旅游景区位于怀柔区桥梓镇口头村，距怀柔城6公里。景区地处红螺寺、慕田峪长城景区之间，东距红螺寺3公里，西距慕田峪长城10公里，紧临怀沙旅游公路，交通便利。 景区背靠燕山，宏阔壮美，前拥怀沙河，风光如画圣泉山旅游景区位于怀柔区桥梓镇口头村，距怀柔城6公里。景区地处红螺寺、慕田峪长城景区之间，东距红螺寺3公里，西距慕田峪长城10公里，紧临怀沙旅游公路，交通便利。
+景区背靠燕山，宏阔壮美，前拥怀沙河，风光秀丽景区占地5平方公里，区内九龙山，前弥勒顶海拔388米，山势巍峨，植被茂密。山麓至禅林春晓段， 海拔落差288米，旅游步道平均坡度25度，适宜登山健身。前峰以北，高岭百转，群峰林立，峰岭之间沟谷棋布。后峰观音顶海拔393米，山端庄饱满，意出云表。观音顶前，天成一道迂回峡谷。峡谷中段地势稍见平阔外，松柏掩映间，有唐代古德始创对泉山观音古寺。禅林春晓至观音寺段，平均海拔320米。旅游步道平均坡度1.3度，沿途峰岭沟谷间松柏成林，灌木葱翠。绝尘世喧嚣，有百鸟啼鸣。空气清新，适宜漫步观景;凉风习习，适宜休闲避署。 核心景观区圣泉山观音寺周围，有众多人文和自然景观。尤其人文遗迹中，存在许多无</p>
+                                                    <span style="    color: #fff;">更多</span>
+                            <div class="moreDesc">
+                                <h6>北京圣泉山旅游风景区</h6>
+                                <p style="    color: #cea461;">圣泉山旅游景区位于怀柔区桥梓镇口头村，距怀柔城6公里。景区地处红螺寺、慕田峪长城景区之间，东距红螺寺3公里，西距慕田峪长城10公里，紧临怀沙旅游公路，交通便利。 景区背靠燕山，宏阔壮美，前拥怀沙河，风光如画圣泉山旅游景区位于怀柔区桥梓镇口头村，距怀柔城6公里。景区地处红螺寺、慕田峪长城景区之间，东距红螺寺3公里，西距慕田峪长城10公里，紧临怀沙旅游公路，交通便利。
+景区背靠燕山，宏阔壮美，前拥怀沙河，风光秀丽景区占地5平方公里，区内九龙山，前弥勒顶海拔388米，山势巍峨，植被茂密。山麓至禅林春晓段， 海拔落差288米，旅游步道平均坡度25度，适宜登山健身。前峰以北，高岭百转，群峰林立，峰岭之间沟谷棋布。后峰观音顶海拔393米，山端庄饱满，意出云表。观音顶前，天成一道迂回峡谷。峡谷中段地势稍见平阔外，松柏掩映间，有唐代古德始创对泉山观音古寺。禅林春晓至观音寺段，平均海拔320米。旅游步道平均坡度1.3度，沿途峰岭沟谷间松柏成林，灌木葱翠。绝尘世喧嚣，有百鸟啼鸣。空气清新，适宜漫步观景;凉风习习，适宜休闲避署。 核心景观区圣泉山观音寺周围，有众多人文和自然景观。尤其人文遗迹中，存在许多无从破解的神异古怪的谜团。自古以来，无数到访者揣摩猜测，见仁见智，在民间酝酿成众多神奇的传说故事。这些故事口耳相传，使圣泉山观音寺名声远播。信仰者、猎奇者、访奇者络绎而来，各有心得而云，使圣泉山观音寺地处深山却不萧索，远离人境却香火殷盛。 山不在高，有仙则名，水不在深，有龙则灵。今天，圣泉山观音寺得殊胜因缘，观世音菩萨重现金身宝相，山门重启，圣泉再涌。观迎各界朋友登圣泉山，游观音寺，于身于心，必有所得。
+圣泉山观音寺位于圣泉山后峰弥勒顶东侧谷内，为规整的两进四合院。前为山门，规模虽小，但三门并峙，抵近南山。中门内仅一丈甬路，便是一间正殿，谷称韦驮殿，正供弥勒佛。出韦驮殿后门，是正院，北面三间两进正殿为大雄宝殿，正供佛祖释迦牟尼，配供文殊、普贤二位菩萨。正院东西各三间配殿，西厢正供南海观音，东厢正供如意轮观音。院落不大，建筑雕梁，精雅紧凑。正殿门前左右石碑各一，左为明代成化年功德碑，右为清嘉庆年功德碑。右碑前一古井即韦驮神背井。井口漫砌石板，O砺光滑，井迷木质辘轳，俱为古物。 圣泉山观音寺始建于唐代，距今已有千年历史，但风云变幻，现在已找不到确切的文字记载。据民间传说，唐代著名女将樊梨花镇守幽州北境。一次与北国交兵，被困九龙山(那时圣泉山还叫九龙山)下，敌强我弱，命悬一线。情急之中，樊梨花合掌急呼观世音菩萨显灵!观世音菩萨救我!观世音菩萨闻听呼救，立即点化九龙山的九条伏地青龙，请它们施救，成就殊胜因缘。九条青龙欣然邻命，立即兴云布雨，在军阵上空下起倾盆大雨。交战双方被大雨浇得睁不开眼抬不起臂，自顾不暇。乱军中，樊梨花率闲兵蒙头急奔，突围而云。事后，樊梨花感念观世音菩萨救命之恩，遂在九龙山后云兴之处，为观世音菩萨建寺塑像，以为永久供奉。 年深日久，风雨侵凌，唐代建筑已不见踪迹。但观音寺内正殿前西侧及韦驮殿东南角，今天尚可见到两株古愧残存的根桩，其直径达1.5米以上，应是唐代遗存。唐以后辽、金、元时期，圣泉山一带社会动乱，人口迁不定，圣泉山观音寺的故事多被历史湮没了。 明代正统年间，京师名僧碧天大和尚云游至此。瞻礼古刹，浏览风光，深悟此地藏风聚气，远离尘世，是难得的掩关静修之所。遂发愿重修圣泉山观音寺。经多年募化，明成化年间，由碧天大和尚的弟子定澄禅师主持，圣泉山观音寺得以重修。 明代以来，由于朝庭迁都北京，实行移民政策，京北地区人口骤增，人民生活相对稳定，圣泉山前怀沙河南逐渐形成了较大的村落。因村落地处长城慕田峪关所在山沟的沟口，所以村名定为口头村。 至清代嘉庆年间，观音寺年久失修，殿宇颓败。经住持僧劝募，口头村乡绅大户共同发起集资，庙宇又得到全面修复。 建国后，时事变迁，寺僧四散，至一九五八年最后一名寺僧圆寂，僧房遂空。但口头村民一直在尽心保护寺院建筑，即使在十年动乱期间，圣泉山进香路上的足迹也没有断绝。 二00三年，风云际会，因缘合和，圣泉山观音寺修复工程再次启动。
+如今殿宇新辉，宝像重光。更多的、更远的朋友们聚会在这里，诵大慈大悲观世音菩萨的名。这一轮回圣泉山的复兴，当到永远。
+&gt;&gt;查看虚拟旅游</p>
+                                <i></i>
+                            </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 景点介绍 -->
+                    <div class="scene_recommends">
+                <div class="swiper-container scene-swiper" style="max-width: 1440px;max-height: 340px; background: none; margin: 10px 50px;">
+                    <div class="swiper-wrapper">
+                                                    <div class="swiper-slide" style="    width: 420px !important;">
+                                                                    <div class="pic fl">
+                                                                                    <img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321045730960.jpg">
+                                        
+                                                                            </div>
+                                    <div class="info fr">
+                                                                                                                                            <div class="info-txt">
+                                                        <h6>圣泉山山脉</h6>
+                                                        <p>圣泉山没有五岳之名，却有五岳之势。放眼四周，高岭百转，群峰林立，峰岭之间沟谷棋布，远离尘世喧嚣、独享天然之气。景区山麓至“禅林春晓”段，海拔落差288米，上山步道坡度平均25度，适宜登山健身;“禅林春晓”至观音寺段，松柏葱翠，林荫夹道，山鸟啼鸣，空气清新，适宜漫步观景。</p>
+                                                    </div>
+                                                                                            </div>
+                                    </div>
+                                                                <div class="swiper-slide" style="    width: 420px !important;">
+                                                                    <div class="pic fl">
+                                                                                    <img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321045838961.jpg">
+                                        
+                                                                            </div>
+                                    <div class="info fr">
+                                                                                                                                            <div class="info-txt">
+                                                        <h6>圣泉寺</h6>
+                                                        <p>圣泉山观音寺，一方名胜。相传始建于唐代，复修于明代(有碑文记载)，以后历代都有修葺。寺周围南松北柏，繁盛苍翠，为北斗七星点化。寺内圣泉古井，寺前滴水泉，是韦驮菩萨背来。寺小神奇旺，境深灵迹多，历来受到众多人们的信仰和供奉，自古以来就是北京地区著名的观世音道场。<br/>欣逢盛世，宝像重光，山门重启。2006年4月28日，圣泉山景区正式向社会开放。我们以恭敬心欢迎各界朋友来圣泉山观光旅游，共建观世音道场!</p>
+                                                    </div>
+                                                                                            </div>
+                                    </div>
+                                                                <div class="swiper-slide" style="    width: 420px !important;">
+                                                                    <div class="pic fl">
+                                                                                    <img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321045922732.jpg">
+                                        
+                                                                            </div>
+                                    <div class="info fr">
+                                                                                                                                            <div class="info-txt">
+                                                        <h6>人文遗迹</h6>
+                                                        <p>核心景观区圣泉山观音寺周围，有众多人文和自然景观。人文遗迹中，存在许多无从破解的神异古怪的谜团。自古以来，无数到访者揣摩猜测，见仁见智，在民间酝酿成众多神奇的传说故事。这些故事口耳相传，使圣泉山观音寺名声远播。信仰者、猎奇者、访奇者络绎而来，各有心得而云，使圣泉山观音寺地处深山却不萧索，远离人境却香火殷盛。</p>
+                                                    </div>
+                                                                                            </div>
+                                    </div>
+                                                                </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+                        <!-- 景区图片 -->
+                <div class="scenic-pictures">
+                    <div class="center">
+                        <h5 class="tit" style="    color: #fff;">景区图片                                                            <i style="display: block; color: #fff;" >更多</i>
+                                                    </h5>
+                        <div class="picUi clearfix">
+                            <ul>
+                                                                                                            <li class="li1">
+                                            <img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055010698.jpg@base@tag=imgScale&m=1&w=600&h=400&c=1">
+                                        </li>
+                                                                                                                                                <li class="">
+
+                                            <img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055011547.jpg@base@tag=imgScale&m=1&w=600&h=400&c=1">
+
+                                        </li>
+                                                                                                                                                <li class="">
+                                            <img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055012418.jpg@base@tag=imgScale&m=1&w=600&h=400&c=1">
+
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+                        </div>
+                                                    <div class="morePic">
+                                <i></i>
+                                <!-- Swiper -->
+                                <div class="picFocus">
+                                    <div class="bd">
+                                        <ul>
+                                                                                            <li>
+                                                    <a target="_blank" href="https://s.visitbeijing.com.cn/gallery/2489">
+                                                        <img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055010698.jpg"/>
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a target="_blank" href="https://s.visitbeijing.com.cn/gallery/2489">
+                                                        <img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055011547.jpg"/>
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a target="_blank" href="https://s.visitbeijing.com.cn/gallery/2489">
+                                                        <img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055012418.jpg"/>
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a target="_blank" href="https://s.visitbeijing.com.cn/gallery/2489">
+                                                        <img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055012978.jpg"/>
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a target="_blank" href="https://s.visitbeijing.com.cn/gallery/2489">
+                                                        <img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055013978.jpg"/>
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a target="_blank" href="https://s.visitbeijing.com.cn/gallery/2489">
+                                                        <img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055013583.jpg"/>
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a target="_blank" href="https://s.visitbeijing.com.cn/gallery/2489">
+                                                        <img src="https://r1.visitbeijing.com.cn/vbj-s/2016/0320/20160320053131147.jpg"/>
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a target="_blank" href="https://s.visitbeijing.com.cn/gallery/2489">
+                                                        <img src="https://r1.visitbeijing.com.cn/vbj-s/2016/0320/20160320053131862.jpg"/>
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a target="_blank" href="https://s.visitbeijing.com.cn/gallery/2489">
+                                                        <img src="https://r1.visitbeijing.com.cn/vbj-s/2016/0320/20160320053131978.jpg"/>
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a target="_blank" href="https://s.visitbeijing.com.cn/gallery/2489">
+                                                        <img src="https://r1.visitbeijing.com.cn/vbj-s/2016/0320/20160320053132765.jpg"/>
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                    </div>
+                                    <div class="hd" style="height: 180px;">
+                                        <ul>
+                                                                                            <li><img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055010698.jpg@base@tag=imgScale&m=1&w=600&h=400&c=1"/></li>
+                                                                                            <li><img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055011547.jpg@base@tag=imgScale&m=1&w=600&h=400&c=1"/></li>
+                                                                                            <li><img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055012418.jpg@base@tag=imgScale&m=1&w=600&h=400&c=1"/></li>
+                                                                                            <li><img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055012978.jpg@base@tag=imgScale&m=1&w=600&h=400&c=1"/></li>
+                                                                                            <li><img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055013978.jpg@base@tag=imgScale&m=1&w=600&h=400&c=1"/></li>
+                                                                                            <li><img src="https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321055013583.jpg@base@tag=imgScale&m=1&w=600&h=400&c=1"/></li>
+                                                                                            <li><img src="https://r1.visitbeijing.com.cn/vbj-s/2016/0320/20160320053131147.jpg@base@tag=imgScale&m=1&w=600&h=400&c=1"/></li>
+                                                                                            <li><img src="https://r1.visitbeijing.com.cn/vbj-s/2016/0320/20160320053131862.jpg@base@tag=imgScale&m=1&w=600&h=400&c=1"/></li>
+                                                                                            <li><img src="https://r1.visitbeijing.com.cn/vbj-s/2016/0320/20160320053131978.jpg@base@tag=imgScale&m=1&w=600&h=400&c=1"/></li>
+                                                                                            <li><img src="https://r1.visitbeijing.com.cn/vbj-s/2016/0320/20160320053132765.jpg@base@tag=imgScale&m=1&w=600&h=400&c=1"/></li>
+                                                                                    </ul>
+                                        <span class="pageState"></span>
+                                    </div>
+                                    <a class="next" href="javascript:void(0)"></a>
+                                    <a class="prev" href="javascript:void(0)"></a>
+                                </div>
+
+                                <style type="text/css">
+  /* 详情页轮播css */
+  .picFocus{
+    margin:0 auto;
+    width:750px;
+     position:relative;
+     /*overflow:hidden;  */
+     zoom:1;
+   }
+   .picFocus .bd{
+    width: 750px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+   }
+  .picFocus .bd li{
+    width:750px;
+    height:500px;
+  }
+  .picFocus .bd img{
+    width:750px;
+    height:500px;
+    object-fit: cover;
+  }
+  .picFocus .hd{
+    width:100%;
+    margin-top: 10px;
+    position: relative;
+    overflow:hidden;
+    padding-top: 54px;
+    margin-top: -44px;
+    height: 120px;
+  }
+  .picFocus .hd ul{
+    margin-right:-10px;
+    zoom:1;
+    white-space: nowrap;
+    position: relative;
+    height: 100%;
+  }
+  .picFocus .hd ul:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+  .picFocus .hd ul li{
+    float:left;
+    text-align:center;
+    border-radius: 3px;
+    overflow: hidden;
+    width:180px;
+    height:120px;
+    margin-right: 10px;
+  }
+  .picFocus .hd ul li img{
+    width:180px; height:120px;
+    object-fit: cover;
+    cursor:pointer;
+  }
+  .picFocus .hd ul li.on{ background:url() no-repeat center 0; }
+  .picFocus .hd ul li.on img{ border-color:#f60;  }
+
+  .picFocus .pageState {
+    display: block;
+      text-align: center;
+      line-height: 30px;
+      left: auto;
+      color: rgb(178, 178, 178);
+      font-style: italic;
+      width: 80px !important;
+      background: rgb(255, 255, 255);
+      border-radius: 50px;
+      color: rgb(179, 179, 179);
+      font-size: 16px;
+      position: absolute;
+      top: 0;
+      right: 14px;
+  }
+  .picFocus .pageState span {
+      font-size: 16px;
+      color: rgb(77, 77, 77);
+  }
+
+  .picFocus .next,.picFocus .prev{
+      position: absolute;
+      top: 50%;
+      width: calc(var(--swiper-navigation-size)/ 44 * 27);
+      height: var(--swiper-navigation-size);
+      margin-top: calc(-1 * var(--swiper-navigation-size)/ 2);
+      z-index: 10;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--swiper-navigation-color,var(--swiper-theme-color))
+  }
+  .picFocus .next:hover,.picFocus .prev:hover{
+    opacity: .7;
+  }
+  .picFocus .next,.picFocus .prev{
+    display: block;
+      width: 50px;
+      height: 120px;
+      margin-top: -105px;
+      background: url(https://r1.visitbeijing.com.cn/vbj-s/2021/1101/752e1d1e118d3796447ec02f7d423542.png) center/contain no-repeat;
+      left: -115px;
+  }
+  .picFocus .next{
+      left: auto;
+      right: -115px;
+      background: url(https://r1.visitbeijing.com.cn/vbj-s/2021/1101/24a6e591ec526339ddafd22a2b4c434f.png) center/contain no-repeat;
+  }
+  .picFocus .next.nextStop,.picFocus .prev.prevStop{
+    opacity: .7;
+  }
+</style>
+<script type="text/javascript" src="https://s.visitbeijing.com.cn/web/js/jquery.SuperSlide.2.1.3.js"></script>
+<script type="text/javascript">
+
+  jQuery(".picFocus").slide({ mainCell:".bd ul",effect:"left",autoPlay:false,pnLoop:false });
+  $('.picFocus .hd ul').width($('.picFocus .hd ul li').length*190);
+  var flag,flag1;
+  $('.picFocus .next').click(function(){
+    if($('.pageState span').text()>=5 && !flag) {
+      if($(this).hasClass('nextStop')){
+        flag = true;
+      }
+      $('.picFocus .hd ul').animate({marginLeft:"-=190px"});
+      flag1 = false;
+    }
+  })
+  $('.picFocus .prev').click(function(){
+    if($('.pageState span').text()>=4 && !flag1){
+      if($(this).hasClass('nextStop')){
+        flag1 = true;
+      }
+      $('.picFocus .hd ul').animate({marginLeft:"+=190px"});
+      flag = false;
+    }
+  })
+
+</script>
+
+</div>
+
+
+</div>
+</div>
+
+
+
+                <!-- 周边住宿 -->
+                                    <div class="tour_recommends">
+                        <div class="center">
+                            <h5 class="tit" style="    color: #fff;">
+                                周边住宿                                
+                            </h5>
+                            <ul class="clearfix">
+                                                                    <li>
+                                        <a href="https://s.visitbeijing.com.cn/hotel/101010235" target="_blank">
+                                            <div class="pic">
+                                                <img src="https://r1.visitbeijing.com.cn/vbj-s/2016/0810/20160810122047207.jpg">
+                                            </div>
+                                            <p style="    color: #fff;">北京圣泉寺8号农家院</p>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://s.visitbeijing.com.cn/hotel/478" target="_blank">
+                                            <div class="pic">
+                                                <img src="https://r1.visitbeijing.com.cn/vbj-s/2012/1208/20121208054616854.jpg">
+                                            </div>
+                                            <p style="    color: #fff;">甘涧峪村</p>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://s.visitbeijing.com.cn/attraction/119382" target="_blank">
+                                            <div class="pic">
+                                                <img src="https://r1.visitbeijing.com.cn/vbj-s/2016/0810/20160810011149260.jpg">
+                                            </div>
+                                            <p style="    color: #fff;">圣泉寺</p>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://s.visitbeijing.com.cn/attraction/117959" target="_blank">
+                                            <div class="pic">
+                                                <img src="https://r1.visitbeijing.com.cn/vbj-s/2012/1207/20121207054019323.jpg">
+                                            </div>
+                                            <p style="    color: #fff;">红螺慧缘谷</p>
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                    </div>
+                
+
+                    <div class="center">
+                      <h5 class="tit" style="    color: #fff;">
+                          文创工坊                               
+                      </h5>
+                    </div>
+                    <div class="wrapper3" style="background:none ;    min-height: 540px;max-height: 640px;">
+
+                      <div class="content3" style="margin: 15px 205px;">
+                        <div class="bg-shape">
+                          <img src="./images/div/文字.png" alt="">
+                        </div>
+                    
+                        
+                        <div class="product-img">
+                    
+                          <div class="product-img__item" id="img1">
+                            <img src="./images/div/手串-removebg-preview.png" alt="star wars" class="product-img__img">
+                          </div>
+                    
+                          <div class="product-img__item" id="img2">
+                            <img src="./images/div/稻草-removebg-preview.png" alt="star wars" class="product-img__img">
+                          </div>
+                    
+                          <div class="product-img__item" id="img3">
+                            <img src="./images/div/杯子-removebg-preview.png" alt="star wars" class="product-img__img">
+                          </div>
+                    
+                          <div class="product-img__item" id="img4">
+                            <img src="./images/div/扇子-removebg-preview.png" alt="star wars" class="product-img__img">
+                          </div>
+                    
+                    
+                        </div>
+                    
+                    
+                    
+                        <div class="product-slider">
+                          <button class="prev3 disabled" style="background-color: #f0f0f0;">
+                            <span class="icon">
+                              <svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-left"></use></svg>
+                            </span>
+                          </button>
+                          <button class="next3" style="background-color: #f0f0f0;">
+                            <span class="icon">
+                              <svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+                            </span>
+                          </button>
+                    
+                          <div class="product-slider__wrp swiper-wrapper">
+                            <div class="product-slider__item swiper-slide" data-target="img4">
+                              <div class="product-slider__card">
+                                <img src="./images/div/扇子.png" alt="star wars" class="product-slider__cover" style="height: 100%; border: none; filter: brightness(30%);">
+                                <div class="product-slider__content">
+                                  <h1 class="product-slider__title">
+                                    檀香扇紫檀木折扇 <br>
+                                    檀香镂空
+                                  </h1>
+                                  <span class="product-slider__price">¥179.<sup>99</sup></span>
+                                  <div class="product-ctr">
+                                    <div class="product-labels">
+                                      <div class="product-labels__title">颜色分类</div>
+                    
+                                      <div class="product-labels__group">
+                                        <label class="product-labels__item">
+                                          <input type="radio" class="product-labels__checkbox" name="type5" >
+                                          <span class="product-labels__txt">紫</span>
+                                        </label>
+                    
+                                        <label class="product-labels__item">
+                                          <input type="radio" class="product-labels__checkbox" name="type5" checked>
+                                          <span class="product-labels__txt">黑</span>
+                                        </label>
+                    
+                                        <label class="product-labels__item">
+                                          <input type="radio" class="product-labels__checkbox" name="type5" >
+                                          <span class="product-labels__txt">黄</span>
+                                        </label>
+                    
+                                        <label class="product-labels__item">
+                                          <input type="radio" class="product-labels__checkbox" name="type5" >
+                                          <span class="product-labels__txt">白</span>
+                                        </label>
+                    
+                                      </div>
+                    
+                                    </div>
+                    
+                                    <span class="hr-vertical"></span>
+                    
+                                    <div class="product-inf">
+                                      <div class="product-inf__percent">
+                                        <div class="product-inf__percent-circle">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                                            <defs>
+                                              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" stop-color="#0c1e2c" stop-opacity="0" />
+                                                <stop offset="100%" stop-color="#cb2240" stop-opacity="1" />
+                                              </linearGradient>
+                                            </defs>
+                                            <circle cx="50" cy="50" r="47" stroke-dasharray="240, 300" stroke="#cb2240" stroke-width="4" fill="none"/>
+                                          </svg>
+                                        </div>
+                                        <div class="product-inf__percent-txt">
+                                          80%
+                                        </div>
+                                      </div>
+                    
+                                      <span class="product-inf__title">好评率</span>
+                                    </div>
+                    
+                                  </div>
+                    
+                                  <div class="product-slider__bottom">
+                                    <button class="product-slider__cart">
+                                      加 入 购 物 车
+                                    </button>
+                    
+                                    <button class="product-slider__fav js-fav"><span class="heart"></span> 选 入 心 愿 清 单</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="product-slider__item swiper-slide" data-target="img1">
+                              <div class="product-slider__card">
+                                <img src="./images/div/手串.jpg" alt="star wars" class="product-slider__cover" style="height: 100%; border: none; filter: brightness(30%);">
+                                <div class="product-slider__content">
+                                  <h1 class="product-slider__title">
+                                    北京圣泉香灰瓷手串<br> 景泰蓝
+                                  </h1>
+                                  <span class="product-slider__price">¥860.<sup>00</sup></span>
+                                  <div class="product-ctr">
+                                    <div class="product-labels">
+                                      <div class="product-labels__title">颜 色 分 类</div>
+                    
+                                      <div class="product-labels__group">
+                                        <label class="product-labels__item">
+                                          <input type="radio" class="product-labels__checkbox" name="type1" checked>
+                                          <span class="product-labels__txt">帝王砂款</span>
+                                        </label>
+                    
+                                        <label class="product-labels__item">
+                                          <input type="radio" class="product-labels__checkbox" name="type1">
+                                          <span class="product-labels__txt">晶体砂款</span>
+                                        </label>
+                                      </div>
+                    
+                                    </div>
+                    
+                                    <span class="hr-vertical"></span>
+                    
+                                    <div class="product-inf">
+                                      <div class="product-inf__percent">
+                                        <div class="product-inf__percent-circle">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                                            <defs>
+                                              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" stop-color="#0c1e2c" stop-opacity="0" />
+                                                <stop offset="100%" stop-color="#cb2240" stop-opacity="1" />
+                                              </linearGradient>
+                                            </defs>
+                                            <circle cx="50" cy="50" r="47" stroke-dasharray="270, 300" stroke="#cb2240" stroke-width="4" fill="none"/>
+                                          </svg>
+                                        </div>
+                                        <div class="product-inf__percent-txt">
+                                          90%
+                                        </div>
+                                      </div>
+                    
+                                      <span class="product-inf__title">好评率</span>
+                                    </div>
+                    
+                                  </div>
+                    
+                                  <div class="product-slider__bottom">
+                                    <button class="product-slider__cart">
+                                      加 入 购 物 车
+                                    </button>
+                    
+                                    <button class="product-slider__fav js-fav"><span class="heart"></span> 选 入 心 愿 清 单</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                    
+                            <div class="product-slider__item swiper-slide" data-target="img2">
+                              <div class="product-slider__card">
+                                <img src="./images/div/稻草.jpg" alt="star wars" class="product-slider__cover" style="height: 100%; border: none; filter: brightness(30%);">
+                                <div class="product-slider__content">
+                                  <h1 class="product-slider__title">
+                                    手工稻草动物公仔 <br> 遇“稻”你娃娃
+                                  </h1>
+                                  <span class="product-slider__price">¥129.<sup>99</sup></span>
+                                  <div class="product-ctr">
+                                    <div class="product-labels">
+                                      <div class="product-labels__title">长度分类</div>
+                    
+                                      <div class="product-labels__group">
+                                        <label class="product-labels__item">
+                                          <input type="radio" class="product-labels__checkbox" name="type3" checked>
+                                          <span class="product-labels__txt">25.00 <sup>cm</sup></span>
+                                        </label>
+                    
+                                        <label class="product-labels__item">
+                                          <input type="radio" class="product-labels__checkbox" name="type3">
+                                          <span class="product-labels__txt">35.00 <sup>cm</sup></span>
+                                        </label>
+                                      </div>
+                    
+                                      <div class="product-labels__title">款式分类</div>
+                    
+                                      <div class="product-labels__group">
+                                        <label class="product-labels__item">
+                                          <input type="radio" class="product-labels__checkbox" name="type2" >
+                                          <span class="product-labels__txt">男</span>
+                                        </label>
+                    
+                                        <label class="product-labels__item">
+                                          <input type="radio" class="product-labels__checkbox" name="type2" checked>
+                                          <span class="product-labels__txt">女</span>
+                                        </label>
+                    
+                                   
+                    
+                                      </div>
+                    
+                                    </div>
+                    
+                                    <span class="hr-vertical"></span>
+                    
+                                    <div class="product-inf">
+                                      <div class="product-inf__percent">
+                                        <div class="product-inf__percent-circle">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                                            <defs>
+                                              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" stop-color="#0c1e2c" stop-opacity="0" />
+                                                <stop offset="100%" stop-color="#cb2240" stop-opacity="1" />
+                                              </linearGradient>
+                                            </defs>
+                                            <circle cx="50" cy="50" r="47" stroke-dasharray="240, 300" stroke="#cb2240" stroke-width="4" fill="none"/>
+                                          </svg>
+                                        </div>
+                                        <div class="product-inf__percent-txt">
+                                          80%
+                                        </div>
+                                      </div>
+                    
+                                      <span class="product-inf__title">好评率</span>
+                                    </div>
+                    
+                                  </div>
+                    
+                                  <div class="product-slider__bottom">
+                                    <button class="product-slider__cart">
+                                      加 入 购 物 车
+                                    </button>
+                    
+                                    <button class="product-slider__fav js-fav"><span class="heart"></span>选 入 心 愿 清 单</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                    
+                            <div class="product-slider__item swiper-slide" data-target="img3">
+                              <div class="product-slider__card">
+                                <img src="./images/div/杯子.jpg" alt="star wars" class="product-slider__cover" style="height: 100%; border: none; filter: brightness(30%);">
+                                <div class="product-slider__content">
+                                  <h1 class="product-slider__title">
+                                    羊脂玉白瓷办公杯<br>
+                                    
+                                  </h1>
+                                  <span class="product-slider__price">¥360.<sup>00</sup></span>
+                                  <div class="product-ctr">
+                                    <div class="product-labels">
+                                      <div class="product-labels__title">颜色样式</div>
+                    
+                                      <div class="product-labels__group">
+                                        <label class="product-labels__item">
+                                          <input type="radio" class="product-labels__checkbox" name="type6" checked>
+                                          <span class="product-labels__txt">鱼跃龙门</span>
+                                        </label>
+                    
+                                        <label class="product-labels__item">
+                                          <input type="radio" class="product-labels__checkbox" name="type6">
+                                          <span class="product-labels__txt">千里江山</span>
+                                        </label>
+                                      </div>
+                    
+                                      <div class="product-labels__title">套装类型</div>
+                    
+                                      <div class="product-labels__group">
+                                        <label class="product-labels__item">
+                                          <input type="radio" class="product-labels__checkbox" name="type7" checked>
+                                          <span class="product-labels__txt">办公杯单件</span>
+                                        </label>
+                    
+                                        <label class="product-labels__item">
+                                          <input type="radio" class="product-labels__checkbox" name="type7">
+                                          <span class="product-labels__txt">办公杯+定制礼盒</span>
+                                        </label>
+                                      </div>
+                    
+                                    </div>
+                    
+                                    <span class="hr-vertical"></span>
+                    
+                                    <div class="product-inf">
+                                      <div class="product-inf__percent">
+                                        <div class="product-inf__percent-circle">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                                            <defs>
+                                              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" stop-color="#0c1e2c" stop-opacity="0" />
+                                                <stop offset="100%" stop-color="#cb2240" stop-opacity="1" />
+                                              </linearGradient>
+                                            </defs>
+                                            <circle cx="50" cy="50" r="47" stroke-dasharray="240, 300" stroke="#cb2240" stroke-width="4" fill="none"/>
+                                          </svg>
+                                        </div>
+                                        <div class="product-inf__percent-txt">
+                                          80%
+                                        </div>
+                                      </div>
+                    
+                                      <span class="product-inf__title">好评率</span>
+                                    </div>
+                    
+                                  </div>
+                    
+                                  <div class="product-slider__bottom">
+                                    <button class="product-slider__cart">
+                                      加 入 购 物 车
+                                    </button>
+                    
+                                    <button class="product-slider__fav js-fav"><span class="heart"></span> 选 入 心 愿 清 单</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                    
+                            
+                    
+                          </div>
+                        </div>
+                    
+                      </div>
+                    
+                    </div>
+                    <svg class="hidden" hidden>
+                      <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+                        <path d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z"></path>
+                      </symbol>
+                      <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+                        <path d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z"></path>
+                      </symbol>
+                    </svg>
+
+
+
+                    <!-- 景区视频-最新动态 -->
+<div class="video-news clearfix">
+  <div class="center">
+                      <div class="news fr">
+  <h5 class="tit" style="    color: #ffffff;">最新动态</h5>
+  <ul>
+      <style>
+  .box .video-news.only .news li{
+  height: 152px;
+  }
+  .box .video-news.only .news li p{
+  max-height: 60px;
+  overflow: hidden;
+  }
+  </style>
+  <script>
+  $(function(){
+  // 最新动态
+  $.ajax({
+  url:'https://api-hq1806.visitbeijing.com.cn/api1806/search?keyword='+encodeURIComponent($('.infos h3.title').text())+'&lang=chinese&title=true&content=true&limit=4',
+  type: 'get',
+  dataType: 'jsonp',
+  success: function(res){
+  if(res.code === 200){
+  if(res.data.total === 0){
+  $('.box .video-news.only .news').hide()
+  }else{
+  var recommendHtml = '';
+  for(var i in res.data.list){
+      var item = res.data.list[i];
+      if(i<3){
+          recommendHtml += '<li>'
+          +'<h6><a href="//visitbeijing.com.cn/article/'+ item.aid +'" target="_blank">'+ item.title +'</a></h6>'
+          +'<p>'+ item.summary +'</p>'
+          +'</li>';
+      }else{
+          recommendHtml += '<li class="li4">'
+          +'<h6><a href="//visitbeijing.com.cn/article/'+ item.aid +'" target="_blank">'+ item.title +'</a></h6>'
+          +'<p>'+ item.summary +'</p>'
+          +'</li>';
+      }
+  }
+  $('.box .video-news .news ul').append(recommendHtml);
+  
+    // 视频-最新动态部分
+  if($('.video-news .video p').text() === ''){
+      $('.video-news').addClass('only')
+  }
+  if($('.video-news .news li').length === 0){
+      $('.video-news').addClass('onlyV')
+  }
+  
+  $('.box .video-news .news').addClass("news-show");
+  }
+  }else{
+  $('.box .video-news.only .news').hide()
+  console.log(res)
+  }
+  $(".video-news").addClass("video-show");
+  },
+  error: function(e){
+  console.log(e)
+  }
+  })
+  // 景区舒适度
+  if($('.infos .pics .tip span.levels i').data('id')){
+  $.ajax({
+  url:'/service/attraction/comfort-info?sid=' + $('.infos .pics .tip span.levels i').data('id'),
+  type: 'get',
+  dataType: 'jsonp',
+  success: function(res){
+  $('.infos .pics .tip span.levels i').text(res.data.level)
+  },
+  error: function(e){
+  console.log(e)
+  }
+  })
+  }
+  })
+  
+  </script>
+  </ul>
+                              </div>
+                          
+  
+                      </div>
+                  </div>
+
+                地图
+
+                                    <div class="map" style="width: 1340px;padding: 10px 10px;margin: 30px 52px;">
+                        <div class="tit">
+                            <div class="center">
+                                <span class="sp1">地址:</span>
+                                <span class="sp2">近郊怀柔区桥梓镇口头村北200米</span>
+                            </div>
+                        </div>
+                        <div class="mapInfo">
+                            <div class="pos_map" id="allmap" style="height: 500px;"></div>
+                            <div id="r-result"></div>
+                        </div>
+                        <div class="tit1">
+                            <a href="http://api.map.baidu.com/place/search?query=北京圣泉山旅游风景区&location=40.371208,116.588333&radius=1000&output=html&src=webapp.baidu.openAPIdemo"
+                               target="_blank"><span class="sp1">百度地图查看路线</span></a>
+                            <span class="sp2"></span>
+                        </div>
+                    </div>
+
+                    <!-- 地图 -->
+                                        <script type="text/javascript">
+                        $(function () {
+                            var map = new BMap.Map('allmap');
+                            var poi = new BMap.Point(116.588333,40.371208);
+                            map.centerAndZoom(poi, 16);
+                            map.enableScrollWheelZoom();
+                            map.disableScrollWheelZoom()
+                            var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
+                                '地址: 近郊怀柔区桥梓镇口头村北200米 <br/>电话: 010-60637288、010-60637289' +
+                                '</div>';
+                            //创建检索信息窗口对象
+                            var searchInfoWindow = null;
+                            searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+                                enableSendToPhone: false,
+                                title: "北京圣泉山旅游风景区",      //标题
+                                width: 290,             //宽度
+                                // height : 105,              //高度
+                                panel: "r-result",         //检索结果面板
+                                enableAutoPan: true,     //自动平移
+                                searchTypes: [
+                                    BMAPLIB_TAB_FROM_HERE, //从这里出发
+                                    BMAPLIB_TAB_SEARCH,   //周边检索
+                                    BMAPLIB_TAB_TO_HERE  //到这里去
+                                ]
+                            });
+                            var marker = new BMap.Marker(poi); //创建marker对象
+                            //marker.enableDragging(); //marker可拖拽
+                            marker.addEventListener("click", function (e) {
+                                searchInfoWindow.open(marker);
+                            })
+                            map.addOverlay(marker); //在地图中添加marker
+                            searchInfoWindow.open(marker);
+                            var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});// 左上角，添加比例尺
+                            var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
+                            map.addControl(top_left_control);
+                            map.addControl(top_left_navigation);
+
+                        })
+                    </script>
+                    <ul class="route center">
+                                                    <li style="    color: #fff;">东直门乘坐916路公交车，于怀柔北大街下车，转乘怀柔至洞台的公交车，圣泉山景区站（口头）下车。或直接乘坐936路旅游专线（怀柔—慕田峪）直接到达圣泉山景区。</li>                                                  
+                                                    <li style="    color: #fff;">由市区上京承高速路，13号出口下高速，沿景区路标行驶到达景区</li>                     </ul>
+    </div>
+
+<!-- 百度统计 -->
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?69214f36a61ec4f20dc70b71487a8333";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- JavaScript Bundle with Popper -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
+<!-- 地图 -->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=adnjg6A2r3wuXv844VjnrevBlNeH99R9"></script>
+
+    <!-- <script type="text/javascript" src="//api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <link rel="stylesheet" href="//api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css">
+     -->
+    <script type="text/javascript" src="./js/SearchInfoWindow_min.js"></script>
+                    <script type="text/javascript" src=" https://s.visitbeijing.com.cn/web/js/swiper.3.4.2.js"></script>
+                    <script type="text/javascript" src=" https://s.visitbeijing.com.cn/web/js/detail.js"></script>
+
+      </section>
+
+
+    </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script  src="./js/index.js"></script>
+    <script src="./js/div.js"></script>
+
+
+</body>
+</html>

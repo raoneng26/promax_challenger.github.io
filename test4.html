@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>做任务赚积分</title>
+    <style>
+
+        #menu_point {
+            display: none;
+            position: absolute;
+			height: 100px;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-image: url('./images/point/point.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+        #menu_point:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(transparent, rgba(0,0,0,0.5));
+        }
+        #menuLink {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .score_point {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 28px;
+			font-weight: 600;
+            color: #1c1b1b;
+        }
+        .score_point img {
+            height: 24px;
+            margin-left: 0px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .message_point {
+            position: absolute;
+            top: 132px;
+            left: 50%;
+            transform: translate(-50%, -320%);
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #000000;
+            padding: 10px;
+			font-weight: 600;
+            text-align: center;
+        }
+		.menu_task{
+			position: absolute;
+			left: 0px;
+			top: 140px;
+			width: 100%;
+			height: 250%;
+			background-color: rgb(0 0 0 / 16%);
+
+		}
+		#tasks{
+			width: 100%;
+		}
+        .task {
+            position: relative;
+            background-color: #fff;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+        }
+        .task img {
+            height: 24px;
+            margin-right: 10px;
+        }
+        .task p {
+            flex-grow: 1;
+        }
+        .task span {
+            color: #000000; /* Green */
+            display: block;
+        }
+        .task button {
+            background-color: #af82c6; 
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        .points {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            color: #4CAF50; /* Green */
+        }
+        .points img {
+            height: 16px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="menuLink">显示菜单</a>
+	
+    <div id="menu_point">
+        <div class="score_point">
+            <span id="score_point">0</span>
+            <img src="./images/point/coin.svg" alt="金币"> <!-- 你的金币图标 -->
+        </div>
+        <div class="close" onclick="closeMenu()">×</div> <!-- 退出菜单的图标 -->
+        <div class="menu_task">
+			<div class="message_point">
+				<span style="color:rgb(235, 96, 96);"> 3</span>个任务未完成<span style="color:rgb(235, 96, 96);"> 6</span>个积分未领取
+			</div>
+			<div id="tasks" style="position: absolute;left: 2px;    margin-top: 32px;">
+				<!-- 任务将在这里列出 -->
+			</div>
+		</div>
+
+    </div>
+
+    <script>
+        var tasks = [
+            { name: "每日签到", points: 200, rewardPoints: "200", buttonLabel: "领取积分", taskURL: "#", icon: "./images/point/qiandao.svg" },
+            { name: "文化圈点赞1篇分享", points: 200, rewardPoints: "200", buttonLabel: "去完成", taskURL: "survey.html", icon: "./images/point/dianzan.svg" },
+            { name: "体验VR观景3min", points: 300, rewardPoints: "300", buttonLabel: "去完成", taskURL: "vr.html", icon: "./images/point/vr.svg" },
+            { name: "乐行农场", points: 500, rewardPoints: "500", buttonLabel: "去完成", taskURL: "farm.html", icon: "./images/point/nongchang.svg" },
+        ];
+        var score = 0;
+
+        var tasksDiv = document.getElementById('tasks');
+        var scoreSpan = document.getElementById('score_point');
+        var menu = document.getElementById('menu_point');
+        var menuLink = document.getElementById('menuLink');
+
+        tasks.forEach(function(task, index) {
+            var taskDiv = document.createElement('div');
+            taskDiv.className = 'task';
+            var taskIcon = document.createElement('img');
+            taskIcon.src = task.icon; // Set the icon source to the task's icon
+            taskDiv.appendChild(taskIcon);
+            var taskP = document.createElement('p');
+            taskP.textContent = task.name;
+            taskDiv.appendChild(taskP);
+            var completeButton = document.createElement('button');
+            completeButton.textContent = task.buttonLabel;
+            completeButton.onclick = function() {
+                if (task.buttonLabel === "领取积分") {
+                    score += task.points;
+                    scoreSpan.textContent = score;
+                    completeButton.textContent = "已领取";
+                    completeButton.style.backgroundColor = "#888";
+                    completeButton.disabled = true;
+                } else {
+                    window.location.href = task.taskURL;
+                    if (index !== tasks.length - 1) {
+                        setTimeout(function() {
+                            completeButton.textContent = "领取积分";
+                        }, 3000);
+                    }
+                }
+            };
+            taskDiv.appendChild(completeButton);
+            var pointsDiv = document.createElement('div');
+            pointsDiv.className = 'points';
+            pointsDiv.textContent = task.rewardPoints; // 使用任务的奖励积分
+            var pointsIcon = document.createElement('img');
+            pointsIcon.src = './images/point/coin.svg'; // 你的金币图标
+            pointsDiv.appendChild(pointsIcon);
+            taskDiv.appendChild(pointsDiv);
+            tasksDiv.appendChild(taskDiv);
+        });
+
+        menuLink.onclick = function(e) {
+            e.preventDefault();
+            menu.style.display = 'block';
+        };
+
+        function closeMenu() {
+            menu.style.display = 'none';
+        }
+
+
+    </script>
+</body>
+</html>
