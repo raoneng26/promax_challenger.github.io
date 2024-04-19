@@ -1,0 +1,117 @@
+@charset "UTF-8";/* CSS Document */
+@font-face{
+    font-family:Poppins;
+    src:url("../fonts/Poppins-Regular.ttf"),
+    url("../fonts/Poppins-Regular.eot"); /* IE9 */
+}
+@font-face{
+    font-family:Manzein;
+    src:url("../fonts/Manzein-demo-2.ttf"),
+    url("../fonts/Manzein-demo-2.eot"); /* IE9 */
+}
+@font-face{
+    font-family:PerfectMoment;
+    src:url("../fonts/PerfectMoment.ttf"),
+    url("../fonts/PerfectMoment.eot"); /* IE9 */
+}
+@font-face{
+    font-family:DIN;
+    src:url("../fonts/DIN.ttf"),
+    url("../fonts/DIN.eot"); /* IE9 */
+}
+@font-face{
+    font-family:'DIN';
+    src:url("../fonts/DIN.ttf"),
+    url("../fonts/DIN.eot"); /* IE9 */
+}
+/*=====================通用样式定义========================*/
+body,th,td{font-size:12px;font-family:Poppins;}
+body{margin:0;padding:0;word-break:break-word;font-size:12px;background:#fff;}
+form,ul,li,p,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+a,button{cursor:pointer;}
+input,select{border:0 none;box-sizing:border-box;padding:0;font-size:14px;line-height:16px;}
+button{background:none;border:none;}
+table,td{font-size:12px;padding:0;border-collapse:collapse;}
+img{border:0;vertical-align:middle;}
+ul,li{list-style-type:none;}
+/* 通用浮动属性 */
+.fl{float:left;}
+.fr{float:right;}
+.clear{clear:both;line-height:0;height:0;font-size:0;overflow:hidden;}
+.clear1{clear:both;line-height:0;height:0;}
+.clearfix::before,.clearfix::after{content:'';display:block;visibility:hidden;clear:both;line-height:0;height:0;}
+/*文字对齐方式*/
+.tc{text-align:center;}
+.ind{text-indent:2em;}
+.center{width:1100px;height:auto;position:relative;margin:0 auto;}
+/*常用方法*/
+.b{font-weight:bold;}
+.w80{width:80px;}
+.w165{width:165px;}
+/* 默认链接颜色 */
+a:link,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+/*清除链接虚框*/
+:focus{outline:none;}
+/*针对Firfox*/
+a,area{blr:expression(this.onFocus=this.blur());}
+
+input::-webkit-input-placeholder{color:#000000;}
+input::-moz-placeholder{/* Mozilla Firefox 19+ */
+ color:#000000;}
+input:-moz-placeholder{/* Mozilla Firefox 4 to 18 */
+ color:#000000;}
+input:-ms-input-placeholder{/* Internet Explorer 10-11 */
+ color:#000000;}
+
+/* reset container */
+body{font-family:'MicrosoftYaHei';min-width:1200px;}
+
+/* header */
+.head{height:150px;background:url(https://r1.visitbeijing.com.cn/vbj-s/2021/1025/0aa1efa60bd95b50b7dfe58da4360a0b.png) center/cover no-repeat; background-size: 1920px auto;}
+.head .logo-search{ height:105px;display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: space-between; align-items: center; align-content: stretch; margin-bottom: 5px;}
+.head .logo-search .logo{ width:314px;height:50px;text-indent:-100000px;background:url(https://r1.visitbeijing.com.cn/vbj-s/2021/1025/19f4c25d2d2a6c295b7e06a0cc0d221c.png) no-repeat; background-size: 100%;}
+.head .logo-search .search{height:42px;width:266px;background:url(https://r1.visitbeijing.com.cn/vbj-s/2021/1025/934272a98c30ed6509bee60d3a96bd8c.png) no-repeat;text-indent:21px;position:relative; background-size: 100%;}
+.head .logo-search .search span{position:absolute;top:7px;right:24px;width:30px;height:30px;opacity:.6;background:url(https://r1.visitbeijing.com.cn/vbj-s/2021/1025/8d01144cdca0b9b37cc64016bcfb6bbc.png) center no-repeat;cursor:pointer; background-size: 20px auto;}
+.head .logo-search .search span:hover{opacity:1;}
+.head .logo-search .search input{width:70%;font-size:14px;line-height:42px;color:#FFE0B0;}
+.head .logo-search .search input::placeholder{color:#FFE0B0;}
+/* .head .nav{height:64px;} */
+.head .nav > ul{height:100%;display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:space-around;align-items:center;position:relative;}
+.head .nav > ul::before{position:absolute;content:'';width:2px;height:10px;background:#FFEC43;left:0;border-radius:3px;}
+.head .nav > ul > li {flex-grow:1;text-align:center;position:relative; width: 104px;}
+.head .nav > ul > li a span{ display:inline-block;line-height:24px;font-size:16px;color:#ffffff;font-weight:300; width: 104px;}
+.head .nav > ul > li:hover span{background:#F2B450;font-weight:900; color:#fff; border-radius: 3px;}
+.head .nav > ul > li::after{ position:absolute;content:'';width:2px;height:10px;background:#FFEC43;right:0;top:10px;border-radius:3px;}
+.head .nav > ul > li .sub { display: none; position: absolute; top: 23px; background: rgba(242,180,80,.7); width: 104px; left: 0; right: 0; margin: 0 auto; border-radius: 0 0 3px 3px; z-index: 100;}
+.head .nav > ul > li .sub li { line-height: 48px; font-size: 14px; border-bottom: 1px solid #fff;}
+.head .nav > ul > li .sub li:last-child { border-bottom: none;}
+.head .nav > ul > li .sub li a { color: #fff;}
+.head .nav > ul > li:hover .sub { display: block; border-radius: 0 0 3px 3px;}
+.head .nav > ul > li .sub li a:hover { color: #B77322;}
+.head .logo-search .search input{height:100%;} 
+
+/* foot */
+.foot{ padding: 33px 0; height: 84px;text-align:center;font-size:14px;line-height:28px;color:#fff; background:url(https://r1.visitbeijing.com.cn/vbj-s/2021/1025/0aa1efa60bd95b50b7dfe58da4360a0b.png) center/cover no-repeat; background-size: 1920px auto;}
+.foot a{color:#fff;}
+.foot span{margin:0 10px;}
+
+/* breadcrumb */
+.breadcrumb{margin-top:30px;margin-bottom:20px;list-style:none; padding: 0; font-size: 16px;}
+.breadcrumb>li{display:inline-block}
+.breadcrumb>li+li:before{content:">\A0";padding:0 3px;color:#ccc}
+.breadcrumb a{color:#666}
+.breadcrumb>.active { color: #999;}
+
+/* page */
+.box .page,.container .page{margin:50px 0;font-size:17px;height:36px;text-align:center;white-space: nowrap;}
+.box .page a,.box .page span,.container .page a,.container .page span{margin:0 7px;padding:6px 12px;background:#F7F7F7;border:1px solid #E6E6E6;box-sizing:border-box;border-radius:3px;font-size:14px;text-align:center;color:#1F0D09;min-width:36px;display:inline-block;}
+.box .page span.active,.container .page span.active{background:#D6B265;border:0 none;color:#fff;}
+.box .page .total,.container .page .total{font-size:14px;line-height:24px;text-align:center;color:#6e5f5c;background:#ffffff;border:0 none;}
+.box .page .total i,.container .page .total i{font-style:normal;color:#ff3f3f;}
+
+/* banner */
+.banner img { width: 100%;}
+
+
+.container { min-height: calc(100vh - 300px); }
