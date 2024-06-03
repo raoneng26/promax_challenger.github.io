@@ -39,7 +39,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url(https://r1.visitbeijing.com.cn/vbj-s/2013/0321/20130321050201330.jpg);
+  background-image: url(../img/bgc.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
